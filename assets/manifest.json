@@ -6,12 +6,12 @@
     {
       "file": "linkedin-funnel.png",
       "source": "System architecture diagram",
-      "sha256": "2f426255d69d5edc98eff3e453c712badbe564611cb2fc32ed3db1e977c48bf7"
+      "sha256": "0bf88f08cbfe8c29529fcc1c8e904afaea5d0c7a4fe024dac182e0dc55b5fb94"
     },
     {
       "file": "linkedin-funnel.gif",
       "source": "System workflow animation",
-      "sha256": "fbcbe07a9e73de3a1614bbca56ec4d0e7224069f639eed7dc7e43256bcba4187"
+      "sha256": "3feeb9cdd20239c2329aebea254100edfd81761cfdb233f090d0fdc7c3b950f6"
     },
     {
       "file": "linkedin-funnel.excalidraw",
@@ -21,12 +21,12 @@
     {
       "file": "content-waterfall.gif",
       "source": "Content waterfall animation",
-      "sha256": "1e58d314b45e74be30c5a6a2cc0caa343442ac37eefa61953127e1db595a0d36"
+      "sha256": "b326e139c63565584ad89cdece1d38dbd4804981840d665944297b888ed97160"
     },
     {
       "file": "content-waterfall@2x.png",
       "source": "Content waterfall visual",
-      "sha256": "780b62c71cc2da77daa9a6c751d9826cd674d2261d943ca6fb434c2a6216f9dd"
+      "sha256": "3a1ff63c0eb6d5a6e39513dc63e14489b6c2ffc3ce461198cb4ec7522824b8e9"
     },
     {
       "file": "content-waterfall.excalidraw",
