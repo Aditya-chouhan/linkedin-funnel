@@ -6,17 +6,17 @@
     {
       "file": "linkedin-funnel.png",
       "source": "System architecture diagram",
-      "sha256": "07483ed04f33a48f08d856b4c2f89ad31aad43252cf1fade962ce091124b8d4f",
-      "bytes": 2198481,
-      "dimensions": "3326x8817"
+      "sha256": "7b0bd114a25ac2d93df005ac6c443ec95f72a654a26ec0fedf08ec68db099742",
+      "bytes": 2903396,
+      "dimensions": "3200x4800"
     },
     {
       "file": "linkedin-funnel.gif",
       "source": "System workflow animation",
-      "sha256": "6695b6d68c98e58d93b217696afe22be93f8d1c0fc6b874a81f9c1c7af8c67df",
-      "bytes": 2512061,
-      "dimensions": "2200x5832",
-      "frames": 47
+      "sha256": "791277a341dd1f736e754e1d27d1ed95faf2b55a11cf0e217a5790801bb9e610",
+      "bytes": 902229,
+      "dimensions": "1100x1550",
+      "frames": 5
     },
     {
       "file": "linkedin-funnel.excalidraw",
@@ -27,16 +27,16 @@
     {
       "file": "content-waterfall.gif",
       "source": "Content waterfall animation",
-      "sha256": "32cbd82cdd9f1c239429c1a9c46c467b3020b0b763cf9a8cf11dcc9991875050",
-      "bytes": 896423,
+      "sha256": "45111757fddde0e4389db5a742b2befcc31919b494e8bddb35ed8aff42f8e5ae",
+      "bytes": 1215171,
       "dimensions": "1080x1350",
-      "frames": 135
+      "frames": 6
     },
     {
       "file": "content-waterfall@2x.png",
       "source": "Content waterfall visual",
-      "sha256": "b42656bbffd55a86d0adc486a2970cab3d428ec63f4564bcb4f3dd38318ebaf8",
-      "bytes": 809245,
+      "sha256": "628449ba162919a73627fe4f6352233741ef7a766c24440f431f1ffe54fdfe9c",
+      "bytes": 1364051,
       "dimensions": "3200x4000"
     },
     {
@@ -48,9 +48,9 @@
     {
       "file": "content-waterfall-map.png",
       "source": "Content waterfall system map render",
-      "sha256": "0fb61a1f365b9dc812a2093200e21793ebc870c199f3a514502cca89ddd5753a",
-      "bytes": 1429017,
-      "dimensions": "5134x7602"
+      "sha256": "628449ba162919a73627fe4f6352233741ef7a766c24440f431f1ffe54fdfe9c",
+      "bytes": 1364051,
+      "dimensions": "3200x4000"
     }
   ]
 }
