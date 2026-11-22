@@ -6,37 +6,51 @@
     {
       "file": "linkedin-funnel.png",
       "source": "System architecture diagram",
-      "sha256": "945ab9c21ca36ae0e14a473be4127354ab31e615f5440988a659352bedc6b0e2"
+      "sha256": "07483ed04f33a48f08d856b4c2f89ad31aad43252cf1fade962ce091124b8d4f",
+      "bytes": 2198481,
+      "dimensions": "3326x8817"
     },
     {
       "file": "linkedin-funnel.gif",
       "source": "System workflow animation",
-      "sha256": "507881f78ab98bb68d2dcf353a0d89839f32708d31e07e4a6c1997a060298725"
+      "sha256": "6695b6d68c98e58d93b217696afe22be93f8d1c0fc6b874a81f9c1c7af8c67df",
+      "bytes": 2512061,
+      "dimensions": "2200x5832",
+      "frames": 47
     },
     {
       "file": "linkedin-funnel.excalidraw",
       "source": "Editable system architecture map",
-      "sha256": "009bf8759f3931837d144456c219c60f0a43385914b6a16ba814f1caaf4cda96"
+      "sha256": "009bf8759f3931837d144456c219c60f0a43385914b6a16ba814f1caaf4cda96",
+      "bytes": 811468
     },
     {
       "file": "content-waterfall.gif",
       "source": "Content waterfall animation",
-      "sha256": "1cfb6d32e2b9dc6bbe46934231eb0a7bb9c5c1db988ee5ac5e7a0dc39b8926ba"
+      "sha256": "32cbd82cdd9f1c239429c1a9c46c467b3020b0b763cf9a8cf11dcc9991875050",
+      "bytes": 896423,
+      "dimensions": "1080x1350",
+      "frames": 135
     },
     {
       "file": "content-waterfall@2x.png",
       "source": "Content waterfall visual",
-      "sha256": "abdb5319d842577a44059acb14ec0b43e4124cf1725adb055c5fdf9453031544"
+      "sha256": "b42656bbffd55a86d0adc486a2970cab3d428ec63f4564bcb4f3dd38318ebaf8",
+      "bytes": 809245,
+      "dimensions": "3200x4000"
     },
     {
       "file": "content-waterfall.excalidraw",
       "source": "Editable content waterfall map",
-      "sha256": "ce40da27d08de38ed84a075da2c66094e41a9f9703af484838731142ebe64822"
+      "sha256": "ce40da27d08de38ed84a075da2c66094e41a9f9703af484838731142ebe64822",
+      "bytes": 639035
     },
     {
       "file": "content-waterfall-map.png",
       "source": "Content waterfall system map render",
-      "sha256": "534d664df8b2bac97a5915bc304ccfbe1122d4ad95e738f86376e58d45faec06"
+      "sha256": "0fb61a1f365b9dc812a2093200e21793ebc870c199f3a514502cca89ddd5753a",
+      "bytes": 1429017,
+      "dimensions": "5134x7602"
     }
   ]
 }
