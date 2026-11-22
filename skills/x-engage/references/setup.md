@@ -1,13 +1,13 @@
 # X engage setup
 
-First-time setup for an author on their own OXYGEN workspace. Ask only what you cannot find out yourself. Stop for the author's OK after the voice (step 2) and after the watchlist (step 3), then do a first run and show the page.
+First-time setup for an author on their own Claude MCP workspace. Ask only what you cannot find out yourself. Stop for the author's OK after the voice (step 2) and after the watchlist (step 3), then do a first run and show the page.
 
-## Step 1: OXYGEN and the X connection
+## Step 1: Claude MCP and the X connection
 
-1. Follow [the OXYGEN guide](../../../guides/oxygen.md) to install the CLI and log in. Run `oxygen whoami --json` and check it is the author's workspace; put a non-default CLI profile in `oxygen_profile`, never switch the global active profile.
-2. Connect X in the author's OXYGEN workspace (its integrations settings). Then discover the current read actions with `oxygen integrations --help` and `oxygen capabilities search "X recent search" --json`. The scripts default to the `twitter` toolkit with `TWITTER_RECENT_SEARCH` and `TWITTER_POST_LOOKUP_BY_POST_IDS`; if the names differ in the author's workspace, set `x_toolkit`, `x_search_action` and `x_lookup_action` in the config.
-3. Tell the author what reads cost. OXYGEN may estimate 0 credits, but X bills its pay-per-use API for every post a read returns. A lean run (the watchlist's `from:` batches, the author's own replies, replies to them) reads tens of posts; keyword searches return full pages whatever the window and can make a run cost dollars, so they stay opt-in. Agree a budget before the first `--keywords` run.
-4. Copy `config.example.json` to `.oxygen/x-engage.json` at the kit root (git-ignored) and fill `x_handle`.
+1. Follow [the Claude MCP guide](../../../guides/claude-mcp.md) to install the CLI and log in. Run `mcp whoami --json` and check it is the author's workspace; put a non-default CLI profile in `mcp_profile`, never switch the global active profile.
+2. Connect X in the author's Claude MCP workspace (its integrations settings). Then discover the current read actions with `mcp integrations --help` and `mcp capabilities search "X recent search" --json`. The scripts default to the `twitter` toolkit with `TWITTER_RECENT_SEARCH` and `TWITTER_POST_LOOKUP_BY_POST_IDS`; if the names differ in the author's workspace, set `x_toolkit`, `x_search_action` and `x_lookup_action` in the config.
+3. Tell the author what reads cost. Claude MCP may estimate 0 credits, but X bills its pay-per-use API for every post a read returns. A lean run (the watchlist's `from:` batches, the author's own replies, replies to them) reads tens of posts; keyword searches return full pages whatever the window and can make a run cost dollars, so they stay opt-in. Agree a budget before the first `--keywords` run.
+4. Copy `config.example.json` to `.claude/x-engage.json` at the kit root (git-ignored) and fill `x_handle`.
 
 ## Step 2: the voice
 
@@ -19,7 +19,7 @@ First-time setup for an author on their own OXYGEN workspace. Ask only what you 
 
 ## Step 3: the watchlist, circle and big accounts
 
-1. An OXYGEN table called "X Watchlist" in the author's workspace, empty by default (check `oxygen tables --help`). Columns: `handle`, `name`, `followers`, `priority` (`1`, `2`, `3` or `off`), `lane`, `notes`. Seed it with 50 to 150 accounts: the ones the author already replies to most, the ones they name, and active peers in their lanes. Put the table id in `watchlist_table`.
+1. An Claude MCP table called "X Watchlist" in the author's workspace, empty by default (check `mcp tables --help`). Columns: `handle`, `name`, `followers`, `priority` (`1`, `2`, `3` or `off`), `lane`, `notes`. Seed it with 50 to 150 accounts: the ones the author already replies to most, the ones they name, and active peers in their lanes. Put the table id in `watchlist_table`.
 2. Pick about 10 accounts for [circle.md](circle.md) with the author: people in the niche who post often and reply to others.
 3. Optionally fill [big-accounts.md](big-accounts.md) for speed mode.
 4. Show the lists and wait for the author's OK.

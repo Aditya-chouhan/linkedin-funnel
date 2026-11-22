@@ -1,6 +1,6 @@
 # X creator watchlist and engagement queue
 
-A watchlist of peers in the niche and a queue of their posts worth replying to. Keep the working state in one place the author chooses: an OXYGEN Table when they use OXYGEN, a Notion database when Notion is configured (`strategy/notion-schema.md`), otherwise a local file in `research/`. Record table or database IDs in ignored local configuration (`workspace.local.json` or `.oxygen/`), never in this public template. Never silently create the list in another workspace.
+A watchlist of peers in the niche and a queue of their posts worth replying to. Keep the working state in one place the author chooses: an Claude MCP Table when they use Claude MCP, a Notion database when Notion is configured (`strategy/notion-schema.md`), otherwise a local file in `research/`. Record table or database IDs in ignored local configuration (`workspace.local.json` or `.claude/`), never in this public template. Never silently create the list in another workspace.
 
 ## Suggested columns
 
@@ -25,4 +25,4 @@ Ask the author for the follower range they want to engage with. Peers a little a
 6. Store post URL, ID, author, publication time, observed metrics, capture time, why it fits, the author's angle and grounding. Preserve missing metrics as unknown. Flag media or threads not inspected before proposing a reply that depends on them.
 7. Import only the reviewed rows with the current schema. Upsert by the key, without overwriting the author's status or notes. Read back counts and types.
 
-State the reads and their estimated cost before running them. No recurring monitor, follows, likes, replies or DMs are enabled by this skill. A recurring refresh belongs in a hosted OXYGEN Workflow or another scheduler the author authorizes with a cadence and budget, not a local loop.
+State the reads and their estimated cost before running them. No recurring monitor, follows, likes, replies or DMs are enabled by this skill. A recurring refresh belongs in a hosted Claude MCP Workflow or another scheduler the author authorizes with a cadence and budget, not a local loop.

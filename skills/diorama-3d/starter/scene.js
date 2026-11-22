@@ -34,9 +34,9 @@ scene.environmentIntensity = 0.5;
 const css = getComputedStyle(document.documentElement);
 const tok = (name, fallback) => css.getPropertyValue(name).trim() || fallback;
 const C = {
-  ink: tok('--d-ink', '#1F2622'), accent: tok('--d-accent', '#18392A'), soft: tok('--d-accent-soft', '#E1EADB'),
-  slab: tok('--d-slab', '#FCFBF8'), raw: tok('--d-raw', '#C9CCC8'), steel: tok('--d-steel', '#3A4741'),
-  belt: tok('--d-belt', '#2D3D35'), toy: tok('--d-toy', '#D97757'),
+  ink: tok('--d-ink', '#1F1E1D'), accent: tok('--d-accent', '#D97757'), soft: tok('--d-accent-soft', '#F4E8DF'),
+  slab: tok('--d-slab', '#FCFBF8'), raw: tok('--d-raw', '#D4C5B9'), steel: tok('--d-steel', '#4A4642'),
+  belt: tok('--d-belt', '#3D3834'), toy: tok('--d-toy', '#D97757'),
 };
 
 // ---------- helpers ----------
@@ -59,7 +59,7 @@ function canvasTex(w, h, draw) {
 }
 function seeded(seed) { return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
 // a screen of code-like lines on dark glass; emissive so it glows
-function screenTex(seed, bg = '#132019', ink = ['#9FD3A9', '#E1EADB', '#6FAF82']) {
+function screenTex(seed, bg = '#1F1E1D', ink = ['#D97757', '#F4E8DF', '#C97356']) {
   const rnd = seeded(seed);
   return canvasTex(256, 160, (g, w, h) => {
     g.fillStyle = bg; g.fillRect(0, 0, w, h);

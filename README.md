@@ -50,13 +50,13 @@ flowchart TD
         N --> O[Qualified Sales Pipeline & Demo Call]
     end
 
-    style TOFU fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
-    style MOFU fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
-    style QUAL fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
-    style BOFU fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
-    style J fill:#238636,stroke:#2ea043,color:#ffffff
-    style L fill:#da3633,stroke:#f85149,color:#ffffff
-    style K fill:#9e6a03,stroke:#bb8009,color:#ffffff
+    style TOFU fill:#1f1e1d,stroke:#3d3834,stroke-width:1px,color:#f4ede4
+    style MOFU fill:#1f1e1d,stroke:#3d3834,stroke-width:1px,color:#f4ede4
+    style QUAL fill:#1f1e1d,stroke:#3d3834,stroke-width:1px,color:#f4ede4
+    style BOFU fill:#1f1e1d,stroke:#3d3834,stroke-width:1px,color:#f4ede4
+    style J fill:#d97757,stroke:#c97356,color:#ffffff
+    style L fill:#4a4642,stroke:#6e6259,color:#ffffff
+    style K fill:#c97356,stroke:#b85d3d,color:#ffffff
 ```
 
 ---
@@ -157,11 +157,11 @@ All skills live in the **[`skills/`](skills/)** directory and are automatically 
 - [`shorts-edit`](skills/shorts-edit/SKILL.md) — Assemble complete short-form videos with captions and graphics.
 - [`shorts-qa`](skills/shorts-qa/SKILL.md) — Verify frame pacing, caption alignment, and audio levels.
 
-### 8. Pipeline & Workflow Orchestration (4 Skills)
-- [`oxygen-linkedin-marketing`](skills/oxygen-linkedin-marketing/SKILL.md) — Manage warm-signal motions, posts, and tables.
-- [`oxygen-quickstart`](skills/oxygen-quickstart/SKILL.md) — Configure profile watching and engagement tracking.
-- [`oxygen-sequencer`](skills/oxygen-sequencer/SKILL.md) — Bounded, non-spammy outreach sequences.
-- [`oxygen-unibox`](skills/oxygen-unibox/SKILL.md) — Centralized message inbox triage and account routing.
+### 8. Claude & Model Context Protocol (MCP) Orchestration (4 Skills)
+- [`claude-linkedin-marketing`](skills/claude-linkedin-marketing/SKILL.md) — Orchestrate Claude-native content delivery, signal capture, and conversion.
+- [`claude-quickstart`](skills/claude-quickstart/SKILL.md) — Connect LinkedIn Funnel to Claude Code and verify MCP tool integrations.
+- [`claude-sequencer`](skills/claude-sequencer/SKILL.md) — Bounded, consultative outreach cadences with strict stop triggers.
+- [`claude-unibox`](skills/claude-unibox/SKILL.md) — Centralized direct message triage, objection handling, and call booking.
 
 ---
 

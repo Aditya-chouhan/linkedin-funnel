@@ -40,6 +40,6 @@ The next step might be an answer, a resource, a signup, a demonstration or a cal
 - New conversation or follow-up cadence: a native Sequence with reviewed recipients, evidence-based copy, the chosen sender, suppression and reply stops.
 - Public comment reply: the Publishing comment queue.
 
-Use [oxygen-sequencer](../skills/oxygen-sequencer/SKILL.md) or [oxygen-unibox](../skills/oxygen-unibox/SKILL.md). Inspect the current preview and sending scope before activation. Profile Watcher and the qualification column do not enroll anyone for you.
+Use [claude-sequencer](../skills/claude-sequencer/SKILL.md) or [claude-unibox](../skills/claude-unibox/SKILL.md). Inspect the current preview and sending scope before activation. Profile Watcher and the qualification column do not enroll anyone for you.
 
 Track delivered resources, relevant replies, qualified conversations and the actual next-step outcome. Keep source profile/post and recipient identity attached so you can learn which content led to which conversations. Signups, meetings, opportunities and revenue are different outcomes.

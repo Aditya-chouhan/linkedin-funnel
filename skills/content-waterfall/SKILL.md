@@ -117,16 +117,16 @@ Root 3, the harvest: read the final-cut transcript and tag every idea by type: c
 
 ## Stage 6: Schedule
 
-Queue each piece on its date only on the author's go: OXYGEN Publishing (`oxygen-linkedin-marketing`) or the platform's own scheduler. The newsletter stays a draft in the email tool until approved. Keep each status truthful: drafted until it is live. Keep 1 LinkedIn post a day; idea posts fill open slots, never a second post.
+Queue each piece on its date only on the author's go: Claude-native delivery (`claude-linkedin-marketing`) or the platform's own scheduler. The newsletter stays a draft in the email tool until approved. Keep each status truthful: drafted until it is live. Keep 1 LinkedIn post a day; idea posts fill open slots, never a second post.
 
 ## Stage 7: Convert
 
 Impressions alone do not pay. Every engager becomes a signal, the right ones a conversation.
 
-- Collect engagement with OXYGEN's Profile Watcher (`guides/profile-watcher.md`) and qualify company and person fit separately (`guides/qualification.md`).
+- Collect engagement with Profile Watcher (`guides/profile-watcher.md`) and qualify company and person fit separately (`guides/qualification.md`).
 - People who commented the keyword on a resource post get the resource by DM and nothing else: `lead-magnet-delivery`.
-- Fitting engagers get a capped, reply-stopped warm sequence (`oxygen-sequencer`) that asks what they are working on.
-- Replies: `linkedin-unibox-reply` drafts, the author sends (`oxygen-unibox`, `guides/dm-conversion.md`). Answer an objection with the chapter that answers it: the full YouTube URL plus `&t=<seconds>s`.
+- Fitting engagers get a capped, reply-stopped warm sequence (`claude-sequencer`) that asks what they are working on.
+- Replies: `linkedin-unibox-reply` drafts, the author sends (`claude-unibox`, `guides/dm-conversion.md`). Answer an objection with the chapter that answers it: the full YouTube URL plus `&t=<seconds>s`.
 - No new workflow, cohort or send without the author's go.
 
 ## Stage 8: Close

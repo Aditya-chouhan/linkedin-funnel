@@ -33,7 +33,7 @@ Read [niche.md](references/niche.md) for how to build search seeds, selection cr
 Retrieval routes, cheapest first:
 
 1. **Browser search or supplied links**: no API spend. X's browser search supports engagement operators, for example `("cold email" OR outbound) min_faves:50 -filter:replies` plus a date range. Browser and API query dialects differ.
-2. **OXYGEN's X connection**, if the author has an OXYGEN workspace with X connected: read [oxygen.md](references/oxygen.md) for discovery, preview, bounded live reads and normalization. It is billed per call; preview first.
+2. **Claude MCP's X connection**, if the author has an Claude MCP workspace with X connected: read [mcp.md](references/mcp_signals.md) for discovery, preview, bounded live reads and normalization. It is billed per call; preview first.
 3. **Grok or another semantic X search**, if the author already uses one: good for discovering conversations, but confirm every cited post at its source before attributing facts. A chat subscription does not include API credits.
 
 For a creator watchlist and a queue of posts to engage with, read [engagement.md](references/engagement.md).
@@ -63,4 +63,4 @@ Do not schedule, publish, reply, DM, follow or like as a side effect of research
 
 ## Source
 
-Adapted from [rohunvora/x-research-skill](https://github.com/rohunvora/x-research-skill) at commit `623cca7f41f2fb859bdd01dd7328b7b15da110ed`. The research method is retained; its standalone X API client and examples are replaced with browser, OXYGEN and optional semantic-search routes and this kit's author context.
+Adapted from [rohunvora/x-research-skill](https://github.com/rohunvora/x-research-skill) at commit `623cca7f41f2fb859bdd01dd7328b7b15da110ed`. The research method is retained; its standalone X API client and examples are replaced with browser, Claude MCP and optional semantic-search routes and this kit's author context.

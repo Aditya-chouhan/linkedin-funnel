@@ -1,24 +1,24 @@
-# OXYGEN research route
+# Claude MCP research route
 
-Use this route when the author has an OXYGEN workspace with an X connection. Read [the OXYGEN guide](../../../guides/oxygen.md) first. Do not silently switch workspace, environment or the author's default profile.
+Use this route when the author has an Claude MCP workspace with an X connection. Read [the Claude MCP guide](../../../guides/claude-mcp.md) first. Do not silently switch workspace, environment or the author's default profile.
 
 ## Discover the workspace and operation
 
 ```bash
-oxygen whoami --json
-oxygen integrations list --json
-oxygen integrations actions twitter --json
-oxygen integrations run --help
+mcp whoami --json
+mcp integrations list --json
+mcp integrations actions twitter --json
+mcp integrations run --help
 ```
 
-Pin the intended destination with `oxygen --profile YOUR_PROFILE --org YOUR_ORG ...` when needed. Confirm the intended workspace and X connection. Do not hardcode a connection ID in a public file or expose OAuth credentials. If several connections are active, discover how the current command selects one and resolve ambiguity before a live call. Command names and schemas change: discover them, do not trust a copied example.
+Pin the intended destination with `mcp --profile YOUR_PROFILE --org YOUR_ORG ...` when needed. Confirm the intended workspace and X connection. Do not hardcode a connection ID in a public file or expose OAuth credentials. If several connections are active, discover how the current command selects one and resolve ambiguity before a live call. Command names and schemas change: discover them, do not trust a copied example.
 
 If a generic tool catalog lists an X operation that returns `tool_not_found` on preview, try the integration-specific route below before concluding X is not connected.
 
 ## Preview and make a bounded read
 
 ```bash
-oxygen integrations run twitter TWITTER_RECENT_SEARCH \
+mcp integrations run twitter TWITTER_RECENT_SEARCH \
   --input '{"query":"\"cold email\" -is:retweet -is:reply lang:en","max_results":10,"sort_order":"relevancy","tweet_fields":["created_at","public_metrics","author_id","note_tweet"],"expansions":["author_id"],"user_fields":["public_metrics","description"]}' \
   --dry-run --json
 ```
@@ -38,7 +38,7 @@ For a single post, inspect the post-lookup schema before calling. To investigate
 Capture the live JSON in `research/<date>-x-<topic>/raw/` or a temporary file. Do not print credentials or large raw payloads into the conversation. The offline normalizer handles integration and generic tool envelopes, prefers long-post text, joins authors, keeps unavailable metrics null and sorts the retrieved sample. It makes no network calls and cannot publish.
 
 ```bash
-python3 skills/x-research/scripts/normalize_oxygen.py response.json \
+python3 skills/x-research/scripts/normalize_mcp.py response.json \
   --sort bookmarks --limit 10 --fetched-at 2026-01-15T12:00:00Z
 ```
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fresh LinkedIn posts worth a comment from the author, from their LinkedIn Comment Watchlist.
 
-Read only. Uses OXYGEN's managed LinkedIn scraper (cookieless, no connected
+Read only. Uses Claude MCP's managed LinkedIn scraper (cookieless, no connected
 account, so the author's own account and its rate limits are never touched):
 
 - `scraper.linkedin_post_search`, free at the time of writing: 1 call per
@@ -12,7 +12,7 @@ account, so the author's own account and its rate limits are never touched):
   comments, to skip posts they already commented on and, with --last-queue, to
   compare each earlier draft with what they actually posted.
 
-Check current prices with `oxygen tools get <id> --json` before the first run.
+Check current prices with `mcp tools get <id> --json` before the first run.
 Every paid call carries --max-credits and the whole run stops paying at
 --budget. Comments on the author's own posts are not fetched: they answer those
 themselves. Nothing is posted, liked, followed or messaged.

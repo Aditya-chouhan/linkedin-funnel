@@ -1,6 +1,6 @@
 ---
 name: x-engage
-description: Find fresh posts from the author's X watchlist through their OXYGEN X connection, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue page that learns from what they actually post. Use for a daily X reply round or to grow reach through replies; it never posts, likes or follows on its own.
+description: Find fresh posts from the author's X watchlist through their Claude MCP X connection, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue page that learns from what they actually post. Use for a daily X reply round or to grow reach through replies; it never posts, likes or follows on its own.
 ---
 
 Workspace: all context paths below (identity, audience, strategy, voice, brand, raw, research) resolve from `context/` in the kit root. Read both the root `AGENTS.md` and `context/AGENTS.md`. Skill-local `scripts/`, `references/` and `config.example.json` resolve from this skill directory; run the commands below from the kit root.
@@ -11,12 +11,12 @@ Replying becomes a 10 minute job: the posts are found, a reply is drafted in the
 
 ## The hard rule: the author sends, the skill never does
 
-X's automation rules ban automated replies, and the author's reputation is the asset. The skill drafts; the author taps Reply on X (an X intent link with the text filled in) and sends it in X themselves. No posting, liking, following or DMs through OXYGEN, an agent or any API from this skill, also not on "just do it".
+X's automation rules ban automated replies, and the author's reputation is the asset. The skill drafts; the author taps Reply on X (an X intent link with the text filled in) and sends it in X themselves. No posting, liking, following or DMs through Claude MCP, an agent or any API from this skill, also not on "just do it".
 
 ## What it needs
 
-- The author's OXYGEN workspace and CLI ([guides/oxygen.md](../../guides/oxygen.md)) with X connected. X bills its pay-per-use API for every post a read returns, whatever OXYGEN estimates, so the fetch is lean by default and every live call carries `--max-credits`.
-- The config at `.oxygen/x-engage.json` (git-ignored), copied from `config.example.json`: see "Config" below.
+- The author's Claude MCP workspace and CLI ([guides/claude-mcp.md](../../guides/claude-mcp.md)) with X connected. X bills its pay-per-use API for every post a read returns, whatever Claude MCP estimates, so the fetch is lean by default and every live call carries `--max-credits`.
+- The config at `.claude/x-engage.json` (git-ignored), copied from `config.example.json`: see "Config" below.
 - A filled reply voice, receipts, watchlist and circle. First time: run the setup in [setup.md](references/setup.md), with 2 stops for the author's OK.
 - The author's context in `context/`: `identity/proof.md` for any number, `identity/` and `voice/` pages for who they are and how they write.
 
@@ -79,11 +79,11 @@ Twice a day when the author's targets are online (ask them; for a US audience, U
 
 ## Config
 
-`.oxygen/x-engage.json`, from `config.example.json`:
+`.claude/x-engage.json`, from `config.example.json`:
 
 | Field | What it holds |
 |---|---|
-| `oxygen_profile`, `oxygen_org` | The author's CLI profile and org, or `null` for the active ones |
+| `mcp_profile`, `mcp_org` | The author's CLI profile and org, or `null` for the active ones |
 | `x_handle` | The author's X handle |
 | `watchlist_table` | The id of their X Watchlist table |
 | `runs_dir`, `page_url` | Where run files and `taste.json` go (git-ignored), and the published page |

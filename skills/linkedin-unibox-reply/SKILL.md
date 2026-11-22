@@ -7,7 +7,7 @@ Workspace: all context paths below (identity, audience, strategy, voice, brand, 
 
 # LinkedIn Unibox reply
 
-Draft 1 LinkedIn DM reply per thread in the author's voice, aimed at the smallest useful next step: help first, then signup, activation or, for qualified buyers, a call. Show the thread link. Never send unless the author says yes to that exact draft. Thread reading and sending run through `oxygen-unibox`; the conversation framework is `guides/dm-conversion.md`.
+Draft 1 LinkedIn DM reply per thread in the author's voice, aimed at the smallest useful next step: help first, then signup, activation or, for qualified buyers, a call. Show the thread link. Never send unless the author says yes to that exact draft. Thread reading and sending run through `claude-unibox`; the conversation framework is `guides/dm-conversion.md`.
 
 Voice sources: `voice/linkedin-voice.md`, compressed for DMs, and the author's own past messages. Avoid the shapes in [references/anti-patterns.md](references/anti-patterns.md).
 
@@ -55,7 +55,7 @@ Qualify before any call link: company fit, the contact's role, a concrete need a
 
 ## Workflow
 
-1. **List** interested and unanswered LinkedIn threads (see `oxygen-unibox`). A batch is bounded, not an inbox audit; say how much was covered.
+1. **List** interested and unanswered LinkedIn threads (see `claude-unibox`). A batch is bounded, not an inbox audit; say how much was covered.
 2. **Read and route** each thread as above.
 3. **Draft 1 reply per thread** and show a decision queue: ready to send (name, thread link, their latest point, fit evidence, route, the exact draft in a code block so line breaks show), then held items with the missing fact, then counts of already answered and noise. Buyers first, oldest unresolved first within each group.
 4. **Gate:** reread each thread right before presenting and again before sending. A new inbound or outbound message invalidates the old draft. Send only what the author approved, exactly; if the copy changes after approval, ask again.

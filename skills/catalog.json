@@ -76,7 +76,7 @@
     {
       "name": "lead-magnet-delivery",
       "group": "Content waterfall",
-      "description": "Turn a LinkedIn lead-magnet post (\"comment KEYWORD and I'll send it\") into automatic delivery on OXYGEN. Every commenter who asks gets a DM with the link and a public \"Sent it over:)\" reply; 2nd-degree commenters are asked to connect first; nobody is messaged twice. Use when a lead-magnet post is live and the author asks to set up delivery or send the resource to commenters.",
+      "description": "Deliver a promised lead magnet or resource to post commenters via LinkedIn MCP with verification, ledger tracking, and rate limits.",
       "path": "skills/lead-magnet-delivery/SKILL.md",
       "author": "Aditya Chouhan"
     },
@@ -97,7 +97,7 @@
     {
       "name": "linkedin-engage",
       "group": "Engagement",
-      "description": "Find fresh posts from the author's LinkedIn watchlist through OXYGEN's managed scraper, draft 1 or 2 natural comments each where the author has a real receipt, and publish a Copy & open queue page that learns from what they actually post. Use for a LinkedIn comment round or to grow reach through comments; it never comments, likes or messages on its own.",
+      "description": "Find fresh posts from the author's LinkedIn watchlist through Claude MCP's managed scraper, draft 1 or 2 natural comments each where the author has a real receipt, and publish a Copy & open queue page that learns from what they actually post. Use for a LinkedIn comment round or to grow reach through comments; it never comments, likes or messages on its own.",
       "path": "skills/linkedin-engage/SKILL.md",
       "author": "Aditya Chouhan"
     },
@@ -144,31 +144,31 @@
       "author": "Aditya Chouhan"
     },
     {
-      "name": "oxygen-linkedin-marketing",
-      "group": "OXYGEN",
-      "description": "Run OXYGEN LinkedIn content and warm-signal motions through Posts, Publishing, Signals, Tables and bounded Sequences.",
-      "path": "skills/oxygen-linkedin-marketing/SKILL.md",
+      "name": "claude-linkedin-marketing",
+      "group": "Claude & MCP",
+      "description": "Orchestrate Claude-native LinkedIn content delivery, warm-signal capture, MCP qualification, and consultative conversion sequences.",
+      "path": "skills/claude-linkedin-marketing/SKILL.md",
       "author": "Aditya Chouhan"
     },
     {
-      "name": "oxygen-quickstart",
-      "group": "OXYGEN",
-      "description": "Connect LinkedIn Funnel to the reader's OXYGEN workspace and prepare a native Profile Watcher preview using current command schemas.",
-      "path": "skills/oxygen-quickstart/SKILL.md",
+      "name": "claude-quickstart",
+      "group": "Claude & MCP",
+      "description": "Connect LinkedIn Funnel to Anthropic Claude Code, configure Model Context Protocol (MCP) servers, and verify pipeline execution.",
+      "path": "skills/claude-quickstart/SKILL.md",
       "author": "Aditya Chouhan"
     },
     {
-      "name": "oxygen-sequencer",
-      "group": "OXYGEN",
-      "description": "Operate native OXYGEN Sequences for new conversations and outreach cadence, including sender readiness, previews, enrollment, dispatch and recovery.",
-      "path": "skills/oxygen-sequencer/SKILL.md",
+      "name": "claude-sequencer",
+      "group": "Claude & MCP",
+      "description": "Operate Claude-native consultative outreach sequences and multi-touch cadences with strict personalization, rate limits, and stop triggers.",
+      "path": "skills/claude-sequencer/SKILL.md",
       "author": "Aditya Chouhan"
     },
     {
-      "name": "oxygen-unibox",
-      "group": "OXYGEN",
-      "description": "Triage OXYGEN Messages and Unibox conversations, prepare grounded replies and send only within the user's specified account and thread scope.",
-      "path": "skills/oxygen-unibox/SKILL.md",
+      "name": "claude-unibox",
+      "group": "Claude & MCP",
+      "description": "Triage LinkedIn inbox threads and conversation replies, draft consultative responses, and route qualified opportunities to demo booking.",
+      "path": "skills/claude-unibox/SKILL.md",
       "author": "Aditya Chouhan"
     },
     {
@@ -286,7 +286,7 @@
     {
       "name": "x-engage",
       "group": "Engagement",
-      "description": "Find fresh posts from the author's X watchlist through their OXYGEN X connection, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue page that learns from what they actually post. Use for a daily X reply round or to grow reach through replies; it never posts, likes or follows on its own.",
+      "description": "Find fresh posts from the author's X watchlist through their Claude MCP X connection, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue page that learns from what they actually post. Use for a daily X reply round or to grow reach through replies; it never posts, likes or follows on its own.",
       "path": "skills/x-engage/SKILL.md",
       "author": "Aditya Chouhan"
     },

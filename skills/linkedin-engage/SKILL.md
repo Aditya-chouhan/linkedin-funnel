@@ -1,6 +1,6 @@
 ---
 name: linkedin-engage
-description: Find fresh posts from the author's LinkedIn watchlist through OXYGEN's managed scraper, draft 1 or 2 natural comments each where the author has a real receipt, and publish a Copy & open queue page that learns from what they actually post. Use for a LinkedIn comment round or to grow reach through comments; it never comments, likes or messages on its own.
+description: Find fresh posts from the author's LinkedIn watchlist through Claude MCP's managed scraper, draft 1 or 2 natural comments each where the author has a real receipt, and publish a Copy & open queue page that learns from what they actually post. Use for a LinkedIn comment round or to grow reach through comments; it never comments, likes or messages on its own.
 ---
 
 Workspace: all context paths below (identity, audience, strategy, voice, brand, raw, research) resolve from `context/` in the kit root. Read both the root `AGENTS.md` and `context/AGENTS.md`. Skill-local `scripts/`, `references/` and `config.example.json` resolve from this skill directory; run the commands below from the kit root.
@@ -13,12 +13,12 @@ Why comments: an early comment under a bigger creator's post puts the author's n
 
 ## The hard rule: the author posts, the skill never does
 
-LinkedIn bans automated commenting and the author's account is the asset. Nothing in this skill comments, likes, follows, connects or messages on LinkedIn: not through OXYGEN's connected LinkedIn sender, a workflow, a Sequence or any API, and also not when the author says "just do it". Every read goes through OXYGEN's managed scraper (`scraper.*`, cookieless, no connected account), so it never touches the author's own account or its limits. Never use the `linkedin.*` tools here. The page only copies text and opens the post. Lead-magnet replies are a separate system ([lead-magnet-delivery](../lead-magnet-delivery/SKILL.md)).
+LinkedIn bans automated commenting and the author's account is the asset. Nothing in this skill comments, likes, follows, connects or messages on LinkedIn: not through Claude MCP's connected LinkedIn sender, a workflow, a Sequence or any API, and also not when the author says "just do it". Every read goes through Claude MCP's managed scraper (`scraper.*`, cookieless, no connected account), so it never touches the author's own account or its limits. Never use the `linkedin.*` tools here. The page only copies text and opens the post. Lead-magnet replies are a separate system ([lead-magnet-delivery](../lead-magnet-delivery/SKILL.md)).
 
 ## What it needs
 
-- The author's OXYGEN workspace and CLI ([guides/oxygen.md](../../guides/oxygen.md)). Post search is free at the time of writing; reading the author's comments, threads and single posts costs credits. Check current prices with `oxygen tools get <id> --json`; every paid call carries `--max-credits` and every script a `--budget`.
-- The config at `.oxygen/linkedin-engage.json` (git-ignored), copied from `config.example.json`: see "Config" below.
+- The author's Claude MCP workspace and CLI ([guides/claude-mcp.md](../../guides/claude-mcp.md)). Post search is free at the time of writing; reading the author's comments, threads and single posts costs credits. Check current prices with `mcp tools get <id> --json`; every paid call carries `--max-credits` and every script a `--budget`.
+- The config at `.claude/linkedin-engage.json` (git-ignored), copied from `config.example.json`: see "Config" below.
 - A filled comment voice, personal bank and watchlist. First time: run the setup in [setup.md](references/setup.md), with 2 stops for the author's OK.
 - The author's context in `context/`: `identity/proof.md` for any number, `identity/` and `voice/` pages for who they are and how they write.
 
@@ -79,11 +79,11 @@ Twice a weekday when the author's audience is on LinkedIn (ask them; a common de
 
 ## Config
 
-`.oxygen/linkedin-engage.json`, from `config.example.json`:
+`.claude/linkedin-engage.json`, from `config.example.json`:
 
 | Field | What it holds |
 |---|---|
-| `oxygen_profile`, `oxygen_org` | The author's CLI profile and org, or `null` for the active ones |
+| `mcp_profile`, `mcp_org` | The author's CLI profile and org, or `null` for the active ones |
 | `my_profile_url` | The author's LinkedIn profile URL |
 | `watchlist_table` | The id of their LinkedIn Comment Watchlist table |
 | `runs_dir` | Where run files go, under the git-ignored `context/research/` |

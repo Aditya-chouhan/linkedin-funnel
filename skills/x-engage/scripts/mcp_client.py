@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Shared helpers for x-engage: the author's config, the OXYGEN CLI wrapper and the X reads.
+"""Shared helpers for x-engage: the author's config, the Claude MCP CLI wrapper and the X reads.
 
 The config holds names and IDs, never credentials. Copy
-`skills/x-engage/config.example.json` to `.oxygen/x-engage.json` at the kit
+`skills/x-engage/config.example.json` to `.claude/x-engage.json` at the kit
 root (git-ignored) and fill it, or point X_ENGAGE_CONFIG at another file.
-X reads go through the X connection in the author's OXYGEN workspace. X bills
-its pay-per-use API for every post a read returns, whatever OXYGEN estimates,
+X reads go through the X connection in the author's Claude MCP workspace. X bills
+its pay-per-use API for every post a read returns, whatever Claude MCP estimates,
 so every read here is bounded. Nothing here posts, likes, follows or messages.
 """
 import json, os, subprocess, sys, time
@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]          # the kit root: scripts -> skill -> skills -> root
 SKILL = Path(__file__).resolve().parents[1]
-DEFAULT_CONFIG = ROOT / ".oxygen" / "x-engage.json"
+DEFAULT_CONFIG = ROOT / ".mcp" / "x-engage.json"
 RETRYABLE = {"network_timeout", "rate_limited", "provider_error", "server_error", "provider_unavailable"}
 TWEET_FIELDS = ["created_at", "public_metrics", "note_tweet", "conversation_id", "author_id",
                 "attachments", "referenced_tweets", "in_reply_to_user_id", "entities"]
@@ -57,13 +57,13 @@ def runs_dir():
 
 
 def cli(args, max_chars=None, tries=3):
-    """Run 1 read-only OXYGEN CLI call; retry timeouts and provider hiccups (reads are safe to repeat)."""
+    """Run 1 read-only Claude MCP CLI call; retry timeouts and provider hiccups (reads are safe to repeat)."""
     c = config()
-    cmd = ["oxygen"]
-    if c.get("oxygen_profile"):
-        cmd += ["--profile", c["oxygen_profile"]]
-    if c.get("oxygen_org"):
-        cmd += ["--org", c["oxygen_org"]]
+    cmd = ["mcp"]
+    if c.get("mcp_profile"):
+        cmd += ["--profile", c["mcp_profile"]]
+    if c.get("mcp_org"):
+        cmd += ["--org", c["mcp_org"]]
     cmd += [*args, "--json"]
     if max_chars:
         cmd += ["--max-chars", str(max_chars)]
@@ -73,21 +73,21 @@ def cli(args, max_chars=None, tries=3):
         except subprocess.TimeoutExpired:
             if attempt + 1 < tries:
                 continue
-            sys.exit("oxygen CLI timed out 3 times")
+            sys.exit("mcp CLI timed out 3 times")
         try:
             data, _ = json.JSONDecoder().raw_decode(out.stdout.strip())
         except json.JSONDecodeError:
             if attempt + 1 < tries:
                 time.sleep(3)
                 continue
-            sys.exit(f"oxygen CLI returned no JSON: {out.stderr[:400] or out.stdout[:400]}")
+            sys.exit(f"mcp CLI returned no JSON: {out.stderr[:400] or out.stdout[:400]}")
         if data.get("ok"):
             return data["data"]
         code = (data.get("error") or {}).get("code")
         if code in RETRYABLE and attempt + 1 < tries:
             time.sleep(5 * (attempt + 1))
             continue
-        sys.exit(f"oxygen CLI error: {json.dumps(data.get('error'))[:600]}")
+        sys.exit(f"mcp CLI error: {json.dumps(data.get('error'))[:600]}")
 
 
 def _unpack(res, what):

@@ -6,37 +6,37 @@
     {
       "file": "linkedin-funnel.png",
       "source": "System architecture diagram",
-      "sha256": "0bf88f08cbfe8c29529fcc1c8e904afaea5d0c7a4fe024dac182e0dc55b5fb94"
+      "sha256": "945ab9c21ca36ae0e14a473be4127354ab31e615f5440988a659352bedc6b0e2"
     },
     {
       "file": "linkedin-funnel.gif",
       "source": "System workflow animation",
-      "sha256": "3feeb9cdd20239c2329aebea254100edfd81761cfdb233f090d0fdc7c3b950f6"
+      "sha256": "507881f78ab98bb68d2dcf353a0d89839f32708d31e07e4a6c1997a060298725"
     },
     {
       "file": "linkedin-funnel.excalidraw",
       "source": "Editable system architecture map",
-      "sha256": "b971b7267037eb327a988de1fa72ac78b231b1561ed2ac89dc70433433325f08"
+      "sha256": "009bf8759f3931837d144456c219c60f0a43385914b6a16ba814f1caaf4cda96"
     },
     {
       "file": "content-waterfall.gif",
       "source": "Content waterfall animation",
-      "sha256": "b326e139c63565584ad89cdece1d38dbd4804981840d665944297b888ed97160"
+      "sha256": "1cfb6d32e2b9dc6bbe46934231eb0a7bb9c5c1db988ee5ac5e7a0dc39b8926ba"
     },
     {
       "file": "content-waterfall@2x.png",
       "source": "Content waterfall visual",
-      "sha256": "a84870a8d24020aedc1760cb5111ddde9bf046552841e0a2d5e7888af1871e32"
+      "sha256": "abdb5319d842577a44059acb14ec0b43e4124cf1725adb055c5fdf9453031544"
     },
     {
       "file": "content-waterfall.excalidraw",
       "source": "Editable content waterfall map",
-      "sha256": "55a110cd730ab10c1d14f8a9d14a21528f6bc1314eca1a90278f6f41d0eb2a6c"
+      "sha256": "ce40da27d08de38ed84a075da2c66094e41a9f9703af484838731142ebe64822"
     },
     {
       "file": "content-waterfall-map.png",
       "source": "Content waterfall system map render",
-      "sha256": "e9bb00be5c3e608f3b35029c5ed652f17f3dd2c175ddb19974c9d5d8e3a45dc5"
+      "sha256": "534d664df8b2bac97a5915bc304ccfbe1122d4ad95e738f86376e58d45faec06"
     }
   ]
 }

@@ -1,15 +1,15 @@
 # LinkedIn engage setup
 
-First-time setup for an author on their own OXYGEN workspace. Ask only what you cannot find out yourself. There are 2 stops for the author's OK: after the voice (step 2) and after the watchlist (step 3). Then do a first run and show the page before calling the setup done.
+First-time setup for an author on their own Claude MCP workspace. Ask only what you cannot find out yourself. There are 2 stops for the author's OK: after the voice (step 2) and after the watchlist (step 3). Then do a first run and show the page before calling the setup done.
 
-## Step 1: OXYGEN access and prices
+## Step 1: Claude MCP access and prices
 
-1. If `oxygen` is missing, follow [the OXYGEN guide](../../../guides/oxygen.md) to install and log in. Run `oxygen whoami --json` and check it is the author's workspace. If they have several CLI profiles, put theirs in `oxygen_profile` in the config; never switch the global active profile.
-2. Run `oxygen tools get <id> --json` for `scraper.linkedin_post_search`, `scraper.linkedin_profile_comments`, `scraper.linkedin_profile_posts`, `scraper.linkedin_post_comments` and `scraper.linkedin_post`, and tell the author each current price. If one is missing, stop and say so.
-3. Copy `config.example.json` to `.oxygen/linkedin-engage.json` at the kit root (git-ignored) and fill `my_profile_url`. Every call goes through the CLI:
+1. If `mcp` is missing, follow [the Claude MCP guide](../../../guides/claude-mcp.md) to install and log in. Run `mcp whoami --json` and check it is the author's workspace. If they have several CLI profiles, put theirs in `mcp_profile` in the config; never switch the global active profile.
+2. Run `mcp tools get <id> --json` for `scraper.linkedin_post_search`, `scraper.linkedin_profile_comments`, `scraper.linkedin_profile_posts`, `scraper.linkedin_post_comments` and `scraper.linkedin_post`, and tell the author each current price. If one is missing, stop and say so.
+3. Copy `config.example.json` to `.claude/linkedin-engage.json` at the kit root (git-ignored) and fill `my_profile_url`. Every call goes through the CLI:
 
    ```bash
-   oxygen tools run <tool_id> --input-json '<json>' --mode live --approved --max-credits <cap> --json
+   mcp tools run <tool_id> --input-json '<json>' --mode live --approved --max-credits <cap> --json
    ```
 
    It prints an envelope `{ok, data, error}`; the provider response is at `data.result.response`, the credits spent at `data.credits.credits_used`. Free calls take `--max-credits 0`. Every paid call carries a cap and every script a `--budget`.
@@ -28,13 +28,13 @@ This step decides whether the comments sound like the author. Drafts copied from
 
 ## Step 3: the watchlist
 
-An OXYGEN table called "LinkedIn Comment Watchlist" in the author's workspace, empty by default. Check the current table commands with `oxygen tables --help`, create it, then add rows. Columns: `name`, `profile_url`, `followers`, `headline`, `priority` (`1`, `2`, `3` or `off`), `lane`, `notes`. `notes` says how the author knows the person (client, friend, met at an event, a podcast together) and sets how warm the comment can be. The author edits the table in the OXYGEN web app; `off` drops a row.
+An Claude MCP table called "LinkedIn Comment Watchlist" in the author's workspace, empty by default. Check the current table commands with `mcp tables --help`, create it, then add rows. Columns: `name`, `profile_url`, `followers`, `headline`, `priority` (`1`, `2`, `3` or `off`), `lane`, `notes`. `notes` says how the author knows the person (client, friend, met at an event, a podcast together) and sets how warm the comment can be. The author edits the table in the Claude MCP web app; `off` drops a row.
 
 Seed it with 50 to 100 people: the creators the author already comments on most (from step 2), the ones they name, and people in their lanes who show up in the niche searches with real engagement. Fill `followers` where the data has it (the score falls back to 2,000). Put the table id in `watchlist_table`. Show the list and wait for the author's OK.
 
 ## Step 4: first run and the page
 
-Run the skill once ([SKILL.md](../SKILL.md), "The run"). Publish the page with the Artifact tool when the agent has one; it stays private until the author shares it. To let the page save picks, edits and skip reasons, publish it with a `db` capability whose `feedback` collection only the author can read and write. Write the page URL into `.oxygen/linkedin-engage.json` as `page_url`, so every later run republishes to the same URL and the author keeps 1 bookmark. Without an Artifact tool, open the HTML file in the browser; it works offline with the images embedded, and picks stay in that browser.
+Run the skill once ([SKILL.md](../SKILL.md), "The run"). Publish the page with the Artifact tool when the agent has one; it stays private until the author shares it. To let the page save picks, edits and skip reasons, publish it with a `db` capability whose `feedback` collection only the author can read and write. Write the page URL into `.claude/linkedin-engage.json` as `page_url`, so every later run republishes to the same URL and the author keeps 1 bookmark. Without an Artifact tool, open the HTML file in the browser; it works offline with the images embedded, and picks stay in that browser.
 
 ## Scraper notes
 

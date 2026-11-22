@@ -40,7 +40,7 @@ The system operates across three tightly integrated layers:
 | **Author Context & Voice** | Ingest raw operator experience, positioning, proof, and calibrated tone without artificial fluff. | `context/`, `capture-context`, `voice-calibration`, `setup-workspace` |
 | **Content Strategy & Waterfall** | Transform 1 core technical breakdown or thesis per week into 10+ high-leverage assets across formats. | `guides/content-waterfall.md`, `content-waterfall`, `linkedin-copywriter`, `week-posts`, `lead-magnet-creator` |
 | **Visuals & Media System** | Render clean architectural flowcharts, 3D system dioramas, and structured carousels. | `skills/flowchart`, `skills/diorama-3d`, `skills/graphics-designer` |
-| **Social Signal Capture** | Monitor profile engagement, comment keywords, and high-intent industry interactions. | `guides/profile-watcher.md`, `skills/oxygen-linkedin-marketing` |
+| **Social Signal Capture** | Monitor profile engagement, comment keywords, and high-intent industry interactions. | `guides/profile-watcher.md`, `skills/claude-linkedin-marketing` |
 | **Two-Dimensional Qualification** | Filter high-volume engagement through strict Company Fit and Person Fit rubrics to eliminate tire-kickers. | `guides/qualification.md`, `templates/icp-rubric.md`, `templates/qualification-output.schema.json` |
 | **Consultative DM Conversion** | Deliver promised resources seamlessly and convert interest into structured discovery conversations. | `guides/dm-conversion.md`, `guides/lead-magnet-delivery.md`, `skills/linkedin-unibox-reply` |
 

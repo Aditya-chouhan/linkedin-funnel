@@ -4,7 +4,7 @@
 
 The files are here in `skills/`. Open the whole template in your coding agent and ask for a skill by name, or point it directly to its `SKILL.md`. Codex and Claude Code discovery folders link to this same library.
 
-**50 skills total:** 26 core content and branding skills, 12 content waterfall skills, 2 engagement skills, 6 additional video skills and 4 OXYGEN workflow helpers. No separate content-vault installation is needed.
+**50 skills total:** 26 core content and branding skills, 12 content waterfall skills, 2 engagement skills, 6 additional video skills and 4 Claude & Model Context Protocol (MCP) workflow helpers. No separate external setup is needed.
 
 ## The 26 core skills
 
@@ -93,21 +93,21 @@ Grow reach by commenting where the author has something real to add. Both build 
 | [shorts-motion](shorts-motion/SKILL.md) | Add readable, cue-aligned graphics to a short without obscuring the speaker, captions or the meaning of the footage. |
 | [shorts-qa](shorts-qa/SKILL.md) | Verify an edited video for complete speech, correct captions, synchronized graphics, audio integrity, image quality and playback. |
 
-## OXYGEN workflow helpers
+## Claude & MCP workflow helpers
 
 | Skill | Use it to |
 |---|---|
-| [oxygen-linkedin-marketing](oxygen-linkedin-marketing/SKILL.md) | Run OXYGEN LinkedIn content and warm-signal motions through Posts, Publishing, Signals, Tables and bounded Sequences. |
-| [oxygen-quickstart](oxygen-quickstart/SKILL.md) | Connect LinkedIn Funnel to the reader's OXYGEN workspace and prepare a native Profile Watcher preview using current command schemas. |
-| [oxygen-sequencer](oxygen-sequencer/SKILL.md) | Operate native OXYGEN Sequences for new conversations and outreach cadence, including sender readiness, previews, enrollment, dispatch and recovery. |
-| [oxygen-unibox](oxygen-unibox/SKILL.md) | Triage OXYGEN Messages and Unibox conversations, prepare grounded replies and send only within the user's specified account and thread scope. |
+| [claude-linkedin-marketing](claude-linkedin-marketing/SKILL.md) | Orchestrate Claude-native LinkedIn content delivery, warm-signal capture, MCP qualification, and consultative conversion sequences. |
+| [claude-quickstart](claude-quickstart/SKILL.md) | Connect LinkedIn Funnel to Anthropic Claude Code, configure Model Context Protocol (MCP) servers, and verify pipeline execution. |
+| [claude-sequencer](claude-sequencer/SKILL.md) | Operate Claude-native consultative outreach sequences and multi-touch cadences with strict personalization, rate limits, and stop triggers. |
+| [claude-unibox](claude-unibox/SKILL.md) | Triage LinkedIn inbox threads and conversation replies, draft consultative responses, and route qualified opportunities to demo booking. |
 
 ## Skill Architecture & Design Principles
 
 All 50 skills are structured according to the open Agent Skills specification:
 - **Explicit Trigger & Boundary**: Every skill defines exact preconditions and scope limits.
 - **Traceable Context Integration**: Skills resolve author context from `context/` (identity, proof, audience, voice).
-- **Tool Independence**: Content, context, qualification, and strategy work out of the box with standard Markdown and JSON; optional external connections (Notion, OXYGEN, video renderers) are decoupled.
+- **Tool Independence**: Content, context, qualification, and strategy work out of the box with standard Markdown and JSON; optional external connections (Notion, Claude MCP servers, video renderers) are decoupled.
 - **Multi-Agent Discovery**: Fully discovered by OpenAI Codex, Claude Code, and Antigravity via `.agents/skills` and `.claude/skills`.
 
 The [machine-readable catalog](catalog.json) provides JSON-formatted metadata for programmatic consumption.

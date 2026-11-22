@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Shared helpers for linkedin-engage: the author's config and the OXYGEN CLI wrapper.
+"""Shared helpers for linkedin-engage: the author's config and the Claude MCP CLI wrapper.
 
 The config holds names and IDs, never credentials. Copy
-`skills/linkedin-engage/config.example.json` to `.oxygen/linkedin-engage.json`
+`skills/linkedin-engage/config.example.json` to `.claude/linkedin-engage.json`
 at the kit root (git-ignored) and fill it, or point LINKEDIN_ENGAGE_CONFIG at
-another file. Every read goes through OXYGEN's managed LinkedIn scraper
+another file. Every read goes through Claude MCP's managed LinkedIn scraper
 (`scraper.*`, cookieless, no connected account), so the author's own LinkedIn
 account and its limits are never touched. Nothing here posts, likes, follows,
 connects or messages.
@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]          # the kit root: scripts -> skill -> skills -> root
 SKILL = Path(__file__).resolve().parents[1]
-DEFAULT_CONFIG = ROOT / ".oxygen" / "linkedin-engage.json"
+DEFAULT_CONFIG = ROOT / ".mcp" / "linkedin-engage.json"
 
 SPENT = {"credits": 0.0}
 _CONFIG = {}
@@ -56,13 +56,13 @@ def me_slug():
 
 
 def cli(args, max_chars=None):
-    """1 OXYGEN CLI call, pinned to the configured profile and org. Returns the envelope's data."""
+    """1 Claude MCP CLI call, pinned to the configured profile and org. Returns the envelope's data."""
     c = config()
-    cmd = ["oxygen"]
-    if c.get("oxygen_profile"):
-        cmd += ["--profile", c["oxygen_profile"]]
-    if c.get("oxygen_org"):
-        cmd += ["--org", c["oxygen_org"]]
+    cmd = ["mcp"]
+    if c.get("mcp_profile"):
+        cmd += ["--profile", c["mcp_profile"]]
+    if c.get("mcp_org"):
+        cmd += ["--org", c["mcp_org"]]
     cmd += [*args, "--json"]
     if max_chars:
         cmd += ["--max-chars", str(max_chars)]
@@ -71,9 +71,9 @@ def cli(args, max_chars=None):
         # There can be output after the JSON envelope.
         data, _ = json.JSONDecoder().raw_decode(out.stdout.strip())
     except json.JSONDecodeError:
-        raise RuntimeError(f"oxygen CLI returned no JSON: {out.stderr[:400] or out.stdout[:400]}")
+        raise RuntimeError(f"mcp CLI returned no JSON: {out.stderr[:400] or out.stdout[:400]}")
     if not data.get("ok"):
-        raise RuntimeError(f"oxygen CLI error: {json.dumps(data.get('error'))[:600]}")
+        raise RuntimeError(f"mcp CLI error: {json.dumps(data.get('error'))[:600]}")
     return data["data"]
 
 

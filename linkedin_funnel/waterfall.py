@@ -79,7 +79,7 @@ def generate_waterfall_plan(thesis: str, pillar: str = "Pipeline Architecture", 
             "format": "Inbound Triage & Consultative Discovery",
             "title": "Review qualified engagers and conduct consultative problem discovery",
             "primary_skill": "linkedin-unibox-reply",
-            "supporting_skills": ["oxygen-sequencer", "oxygen-unibox"],
+            "supporting_skills": ["claude-sequencer", "claude-unibox"],
             "funnel_job": "Pipeline Acceleration & Demo Booking"
         }
     ]
