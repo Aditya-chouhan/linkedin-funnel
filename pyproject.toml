@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkedin-funnel"
+version = "0.1.0"
+description = "Full-funnel LinkedIn Growth & Pipeline Engineering System: 50 Agent Skills, Content Waterfall, AI ICP Qualification, and Consultative DM Conversion."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Aditya Chouhan", email = "ai.adityachouhan@gmail.com"}
+]
+keywords = [
+    "gtm-engineering",
+    "linkedin-growth",
+    "pipeline-engineering",
+    "ai-agents",
+    "agent-skills",
+    "lead-qualification",
+    "content-waterfall",
+    "b2b-sales"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "jsonschema>=4.20"
+]
+
+[project.scripts]
+linkedin-funnel = "linkedin_funnel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["linkedin_funnel*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

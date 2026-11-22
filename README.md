@@ -18,33 +18,45 @@ Created by **[Aditya Chouhan](https://github.com/Aditya-chouhan)**.
 
 Traditional LinkedIn growth creates empty impressions. This system treats your LinkedIn presence as an engineered B2B pipeline:
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        1. ATTENTION & CONTENT                          │
-│   Operator Experience ──> Weekly Core Thesis ──> Content Waterfall     │
-│   (Technical Video, Deep Essays, Visual Dioramas, Flowcharts, Posts)   │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                        2. SOCIAL SIGNAL CAPTURE                        │
-│   Profile Viewers ──> Post Reactions ──> "Comment KEYWORD" Engagers    │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                   3. TWO-DIMENSIONAL QUALIFICATION                     │
-│   Company Fit (0-100)  ──>  Headcount, Vertical, B2B Business Model   │
-│   Persona Fit (0-100)  ──>  Executive Seniority & Budget Authority     │
-│   Verdict Gate         ──>  Qualified (>=70/70) | Review | Not Fit     │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                4. CONSULTATIVE CONVERSION & PIPELINE                   │
-│   Automated Lead Magnet Delivery ──> High-Value Problem Discovery      │
-│   Structured Non-Salesy DMs      ──> Qualified Discovery / Demo Calls  │
-└────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph TOFU["1. TOFU · Create Attention"]
+        A[Operator Experience & Proof] --> B[Weekly Core Thesis]
+        B --> C[Long-Form Video Breakdown]
+        C --> D[Multi-Channel Content Waterfall]
+        D --> D1[Native LinkedIn Posts & Carousels]
+        D --> D2[Technical Essays & Newsletters]
+        D --> D3[Architectural Flowcharts & 3D Dioramas]
+    end
+
+    subgraph MOFU["2. MOFU · Social Signal & Inbound Capture"]
+        D1 --> E[Profile Viewers & Post Engagers]
+        D1 --> F["Comment KEYWORD" Lead Magnet Requests]
+        E --> G[Engagement Watcher Queue]
+        F --> H[Automated Asset Delivery Loop]
+    end
+
+    subgraph QUAL["3. 2D ICP Qualification Engine"]
+        G --> I{Two-Dimensional ICP Scoring}
+        H --> I
+        I -->|Company Fit >= 70 & Person Fit >= 70| J[Qualified Account]
+        I -->|Score 40-69| K[Review Required]
+        I -->|Disqualified / Non-ICP| L[Archive / Nurture]
+    end
+
+    subgraph BOFU["4. BOFU · Consultative DM Conversion"]
+        J --> M[Consultative Problem Discovery]
+        M --> N[Tailored Architecture Solution]
+        N --> O[Qualified Sales Pipeline & Demo Call]
+    end
+
+    style TOFU fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
+    style MOFU fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
+    style QUAL fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
+    style BOFU fill:#0d1117,stroke:#30363d,stroke-width:1px,color:#c9d1d9
+    style J fill:#238636,stroke:#2ea043,color:#ffffff
+    style L fill:#da3633,stroke:#f85149,color:#ffffff
+    style K fill:#9e6a03,stroke:#bb8009,color:#ffffff
 ```
 
 ---
@@ -192,15 +204,20 @@ supporting LinkedIn posts and architecture flowchart.
 
 ---
 
-## Deterministic CLI Tools
+## Deterministic CLI Tools & Python Package
 
-In addition to agent skills, this repository includes standalone Python utilities:
+The project is packaged as a standard Python module and CLI (`linkedin-funnel`). You can install it locally in editable mode:
+
+```bash
+pip install -e .
+```
 
 ### 1. ICP Qualification CLI
 Evaluate prospective leads deterministically against `templates/icp-rubric.md` and validate with `templates/qualification-output.schema.json`:
 
 ```bash
-# Score a single lead or batch JSON
+linkedin-funnel qualify examples/qualification-decisions.json
+# or via standalone script:
 python3 scripts/qualify.py examples/qualification-decisions.json
 ```
 
@@ -228,6 +245,8 @@ Output:
 Generate a complete 7-day multi-channel sprint schedule from a core topic:
 
 ```bash
+linkedin-funnel waterfall "Full-Funnel Pipeline Architecture" --pillar "GTM Engineering"
+# or via standalone script:
 python3 scripts/content_waterfall_planner.py "Full-Funnel Pipeline Architecture" --pillar "GTM Engineering"
 ```
 
@@ -235,6 +254,8 @@ python3 scripts/content_waterfall_planner.py "Full-Funnel Pipeline Architecture"
 Ensure zero broken links, valid skill frontmatters, and exact asset hash matches:
 
 ```bash
+linkedin-funnel verify
+# or via standalone script:
 python3 scripts/check-template.py
 python3 context/scripts/wiki_lint.py
 ```
@@ -255,6 +276,7 @@ Verification covers:
 - All JSON files match Draft-07 schemas.
 - Deterministic qualification engine scores properly across edge cases.
 - All asset SHA-256 hashes match `assets/manifest.json`.
+- Unified CLI subcommands execute with zero exit codes.
 
 ---
 
@@ -270,13 +292,16 @@ linkedin-funnel/
 ├── context/                   # Personal-brand second brain (identity, voice, audience)
 ├── examples/                  # Synthetic calibration data & test cases
 ├── guides/                    # In-depth architectural guides (waterfall, DM, qualification)
+├── linkedin_funnel/           # Python package (CLI, qualification, waterfall, validator)
 ├── scripts/                   # Deterministic Python CLI tools & verification scripts
 ├── skills/                    # 50 modular, agent-ready skills with full SKILL.md specs
 ├── templates/                 # ICP rubrics, qualification prompts, and JSON schemas
-├── tests/                     # Comprehensive test suite (skills, schemas, scoring)
+├── tests/                     # Comprehensive test suite (skills, schemas, scoring, CLI)
 ├── AGENTS.md                  # Multi-agent operating protocol
 ├── CLAUDE.md                  # Claude Code operating protocol
+├── CONTRIBUTING.md            # Contribution guidelines & testing standards
 ├── LICENSE                    # MIT License (Aditya Chouhan)
+├── pyproject.toml             # Python package configuration
 └── README.md                  # Primary documentation and system blueprint
 ```
 
