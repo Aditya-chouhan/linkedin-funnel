@@ -1,0 +1,42 @@
+{
+  "author": "Aditya Chouhan",
+  "source": "LinkedIn funnel system architecture and content waterfall specifications",
+  "scope": "Production workflow maps, system architectures, and editable templates.",
+  "assets": [
+    {
+      "file": "linkedin-funnel.png",
+      "source": "System architecture diagram",
+      "sha256": "2f426255d69d5edc98eff3e453c712badbe564611cb2fc32ed3db1e977c48bf7"
+    },
+    {
+      "file": "linkedin-funnel.gif",
+      "source": "System workflow animation",
+      "sha256": "fbcbe07a9e73de3a1614bbca56ec4d0e7224069f639eed7dc7e43256bcba4187"
+    },
+    {
+      "file": "linkedin-funnel.excalidraw",
+      "source": "Editable system architecture map",
+      "sha256": "b971b7267037eb327a988de1fa72ac78b231b1561ed2ac89dc70433433325f08"
+    },
+    {
+      "file": "content-waterfall.gif",
+      "source": "Content waterfall animation",
+      "sha256": "1e58d314b45e74be30c5a6a2cc0caa343442ac37eefa61953127e1db595a0d36"
+    },
+    {
+      "file": "content-waterfall@2x.png",
+      "source": "Content waterfall visual",
+      "sha256": "780b62c71cc2da77daa9a6c751d9826cd674d2261d943ca6fb434c2a6216f9dd"
+    },
+    {
+      "file": "content-waterfall.excalidraw",
+      "source": "Editable content waterfall map",
+      "sha256": "55a110cd730ab10c1d14f8a9d14a21528f6bc1314eca1a90278f6f41d0eb2a6c"
+    },
+    {
+      "file": "content-waterfall-map.png",
+      "source": "Content waterfall system map render",
+      "sha256": "e9bb00be5c3e608f3b35029c5ed652f17f3dd2c175ddb19974c9d5d8e3a45dc5"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "author": "Aditya Chouhan",
+  "system": "LinkedIn Funnel",
+  "skills": [
+    {
+      "name": "brand-review",
+      "group": "Visuals",
+      "description": "Review a rendered graphic or visual system for message clarity, identity consistency and export quality; make fixes when requested.",
+      "path": "skills/brand-review/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "brand-system",
+      "group": "Visuals",
+      "description": "Establish or update a client's visual identity, reusable tokens and graphic conventions from their preferences and supplied assets.",
+      "path": "skills/brand-system/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "capture-context",
+      "group": "Context",
+      "description": "Turn supplied interviews, notes, writing samples and other source material into linked author context with traceable evidence.",
+      "path": "skills/capture-context/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "content-strategy",
+      "group": "Content",
+      "description": "Define an author's content pillars, topics, subtopics and funnel roles from their audience, evidence, goals and offer.",
+      "path": "skills/content-strategy/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "content-waterfall",
+      "group": "Content waterfall",
+      "description": "Run a weekly content waterfall: find the idea of the week from what is hot on YouTube, X and LinkedIn, make 1 long video, grow its 3 roots into posts on every platform, ship the week and turn the engagers into conversations. Use when the author gives the idea of the week, wants posts from a video, hands over a recording or YouTube link, or asks to repurpose. Orchestrates the stage skills.",
+      "path": "skills/content-waterfall/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "diorama-3d",
+      "group": "Visuals",
+      "description": "Build a 3D diorama graphic in three.js that tells a system as a place (a room, a factory floor, a machine line), with the roles and tools as glossy toys, labels projected from 3D, a 2-second build-in and a seamless loop, exported as a 1080 x 1350 still, MP4 and GIF. Use for a 3D or animated system graphic for a post or lead magnet; flat posters stay in graphics-designer and editable process maps in flowchart.",
+      "path": "skills/diorama-3d/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "flowchart",
+      "group": "Visuals",
+      "description": "Create editable flowcharts, system maps and funnels with semantic icons, structured operation cards, distinct skill and decision shapes, and verified routing.",
+      "path": "skills/flowchart/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "graphics-designer",
+      "group": "Visuals",
+      "description": "Create an individual graphic, carousel or banner using the client's supplied visual rules, or a neutral unbranded layout when requested.",
+      "path": "skills/graphics-designer/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "launch-video",
+      "group": "Media",
+      "description": "Create a product launch video from a truthful beat script, available assets and a reproducible motion project.",
+      "path": "skills/launch-video/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "lead-magnet-creator",
+      "group": "Content",
+      "description": "Build a complete, reusable lead magnet with a clear reader outcome, worked example, editable starting point and tested delivery path.",
+      "path": "skills/lead-magnet-creator/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "lead-magnet-delivery",
+      "group": "Content waterfall",
+      "description": "Turn a LinkedIn lead-magnet post (\"comment KEYWORD and I'll send it\") into automatic delivery on OXYGEN. Every commenter who asks gets a DM with the link and a public \"Sent it over:)\" reply; 2nd-degree commenters are asked to connect first; nobody is messaged twice. Use when a lead-magnet post is live and the author asks to set up delivery or send the resource to commenters.",
+      "path": "skills/lead-magnet-delivery/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "linkedin-article-adapter",
+      "group": "Content waterfall",
+      "description": "Adapt a finished X Article into a native LinkedIn article while preserving its text and inline figures, recompose the cover at LinkedIn's article ratio, and prepare a numbered upload folder plus a short post to share it. Use after x-article-writer when the author wants the same article on LinkedIn.",
+      "path": "skills/linkedin-article-adapter/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "linkedin-copywriter",
+      "group": "Content",
+      "description": "Draft or edit one LinkedIn post using the author's context, writing samples, factual sources and intended funnel job.",
+      "path": "skills/linkedin-copywriter/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "linkedin-engage",
+      "group": "Engagement",
+      "description": "Find fresh posts from the author's LinkedIn watchlist through OXYGEN's managed scraper, draft 1 or 2 natural comments each where the author has a real receipt, and publish a Copy & open queue page that learns from what they actually post. Use for a LinkedIn comment round or to grow reach through comments; it never comments, likes or messages on its own.",
+      "path": "skills/linkedin-engage/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "linkedin-hook-writer",
+      "group": "Content waterfall",
+      "description": "Write, revise or compare LinkedIn hooks in the author's voice, with measured character counts and mobile-first opening budgets. Use for hook options, first-line edits, or the opening pass inside linkedin-copywriter.",
+      "path": "skills/linkedin-hook-writer/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "linkedin-unibox-reply",
+      "group": "Content waterfall",
+      "description": "Draft LinkedIn DM replies in the author's voice for Unibox triage and 1:1 follow-ups, one at a time, and never send without the author's yes. Use to triage interested or unanswered LinkedIn threads, draft a DM reply, or rewrite a generic suggested reply into the author's voice.",
+      "path": "skills/linkedin-unibox-reply/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "long-form",
+      "group": "Content",
+      "description": "Turn a sourced idea into an article or essay with a clear argument, useful examples and traceable factual claims.",
+      "path": "skills/long-form/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "longform-edit",
+      "group": "Content waterfall",
+      "description": "Edit a long-form YouTube recording into a finished upload, usually a designed talking-head intro with proof graphics followed by a clean, clip-only screen tutorial. Use when a video needs more than a plain cut: an animated intro, numbers shown when they are said, or a few motion graphics.",
+      "path": "skills/longform-edit/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "manim-video",
+      "group": "Media",
+      "description": "Create an explanatory animation in Manim from a precise concept, scene plan and verified local renderer.",
+      "path": "skills/manim-video/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "newsletter-writer",
+      "group": "Content",
+      "description": "Write a useful newsletter issue from source material, the author's voice and one coherent reader takeaway.",
+      "path": "skills/newsletter-writer/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "oxygen-linkedin-marketing",
+      "group": "OXYGEN",
+      "description": "Run OXYGEN LinkedIn content and warm-signal motions through Posts, Publishing, Signals, Tables and bounded Sequences.",
+      "path": "skills/oxygen-linkedin-marketing/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "oxygen-quickstart",
+      "group": "OXYGEN",
+      "description": "Connect LinkedIn Funnel to the reader's OXYGEN workspace and prepare a native Profile Watcher preview using current command schemas.",
+      "path": "skills/oxygen-quickstart/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "oxygen-sequencer",
+      "group": "OXYGEN",
+      "description": "Operate native OXYGEN Sequences for new conversations and outreach cadence, including sender readiness, previews, enrollment, dispatch and recovery.",
+      "path": "skills/oxygen-sequencer/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "oxygen-unibox",
+      "group": "OXYGEN",
+      "description": "Triage OXYGEN Messages and Unibox conversations, prepare grounded replies and send only within the user's specified account and thread scope.",
+      "path": "skills/oxygen-unibox/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "qmd",
+      "group": "Context",
+      "description": "Search and retrieve this repository's author context with optional qmd, using an isolated index for each client folder.",
+      "path": "skills/qmd/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "repurpose-content",
+      "group": "Content",
+      "description": "Turn an interview, newsletter, talk or other long source into distinct content pieces or visual briefs while preserving its facts and voice.",
+      "path": "skills/repurpose-content/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "researcher",
+      "group": "Content",
+      "description": "Research a content or GTM question using primary evidence and return a source-backed brief with implications and open questions.",
+      "path": "skills/researcher/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "setup-workspace",
+      "group": "Context",
+      "description": "Initialize this content workspace for a new author, including local preferences and optional Notion or local search setup.",
+      "path": "skills/setup-workspace/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "shorts-audio",
+      "group": "Media",
+      "description": "Improve recorded speech using measured levels, restrained noise treatment and listening comparisons against the source.",
+      "path": "skills/shorts-audio/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "shorts-cut",
+      "group": "Media",
+      "description": "Select complete takes and remove false starts or dead air while preserving speech meaning and word boundaries.",
+      "path": "skills/shorts-cut/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "shorts-edit",
+      "group": "Media",
+      "description": "Turn raw talking-head recordings into finished shorts using reviewed take selection, audio, captions, cue-based graphics and final QA.",
+      "path": "skills/shorts-edit/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "shorts-motion",
+      "group": "Media",
+      "description": "Add readable, cue-aligned graphics to a short without obscuring the speaker, captions or the meaning of the footage.",
+      "path": "skills/shorts-motion/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "shorts-qa",
+      "group": "Media",
+      "description": "Verify an edited video for complete speech, correct captions, synchronized graphics, audio integrity, image quality and playback.",
+      "path": "skills/shorts-qa/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "talking-head-video-cut",
+      "group": "Content waterfall",
+      "description": "Cut and merge raw OBS or screen-recorded talking-head clips by selecting complete takes, trimming dead air and setup transitions, preserving the native picture, and QAing every join. Use for \"remove the pauses\", \"cut the false starts\", \"just cut and merge\" or a clean long-form YouTube cut.",
+      "path": "skills/talking-head-video-cut/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "video-editor",
+      "group": "Media",
+      "description": "Turn a raw talking-head or screen-demo recording, or a short, into a publish-ready edit in 1 run, in a clean caption style (off-white word-by-word captions, serif payoffs, interludes, hard reframes, no boxes), with overlays timed to the spoken word, -14 LUFS audio, an editable DaVinci Resolve timeline and a QA sheet. Use for \"edit this video\", \"make it publish ready\" or \"add captions\"; it uses talking-head-video-cut for the cut and its bundled Remotion overlay kit for graphics.",
+      "path": "skills/video-editor/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "video-use",
+      "group": "Media",
+      "description": "Edit a supplied video through a source-preserving transcript, timeline and visual review workflow using available rendering tools.",
+      "path": "skills/video-use/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "voice-calibration",
+      "group": "Context",
+      "description": "Build or refine an author's writing guide from their own writing samples and edits, without importing another creator's voice.",
+      "path": "skills/voice-calibration/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "week-posts",
+      "group": "Content",
+      "description": "Plan and draft a week of content using the author's configured pillars, source material, voice, cadence and optional Notion board.",
+      "path": "skills/week-posts/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "x-article-writer",
+      "group": "Content waterfall",
+      "description": "Write or revise a compact native X Article in the author's voice from their newsletter, framework, posts or lead magnet, with the strongest supported result first and useful graphics placed where they explain the argument. Also writes the X post that announces a video. Use for X Articles and illustrated long posts on X; use x-copywriter or x-planner for ordinary X posts.",
+      "path": "skills/x-article-writer/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "x-copywriter",
+      "group": "Content",
+      "description": "Draft concise X posts or threads from grounded source material and the author's actual voice.",
+      "path": "skills/x-copywriter/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "x-engage",
+      "group": "Engagement",
+      "description": "Find fresh posts from the author's X watchlist through their OXYGEN X connection, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue page that learns from what they actually post. Use for a daily X reply round or to grow reach through replies; it never posts, likes or follows on its own.",
+      "path": "skills/x-engage/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "x-planner",
+      "group": "Content waterfall",
+      "description": "Plan the author's X posts together with them, day by day, from 3 lanes: LinkedIn posts repurposed for X, native posts from what is going viral in their niche, and their own launches or assets. Presents a slate for the author to pick and cut, drafts the picks, records their verdicts. Use when planning X for the week or when the content waterfall hands over micro posts and chapter threads.",
+      "path": "skills/x-planner/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "x-research",
+      "group": "Content",
+      "description": "Research X posts and conversations in the author's niche and turn the strongest ones into sourced content ideas and angles the author can support with their own evidence. Use for niche trend scans, finding strong posts, creator research or building an X creator watchlist; it produces research briefs, not published posts.",
+      "path": "skills/x-research/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-description",
+      "group": "Media",
+      "description": "Create a YouTube description, resource links and chapters from the actual final video or timestamped transcript.",
+      "path": "skills/youtube-description/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-publisher",
+      "group": "Media",
+      "description": "Upload or update a video on the user's confirmed YouTube channel with verified metadata, processing state and requested visibility.",
+      "path": "skills/youtube-publisher/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-script",
+      "group": "Media",
+      "description": "Write a recordable YouTube script with a clear viewer promise, evidence, demo beats and a truthful payoff.",
+      "path": "skills/youtube-script/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-thumbnail",
+      "group": "Media",
+      "description": "Design a legible YouTube thumbnail whose visual promise is supported by the actual video.",
+      "path": "skills/youtube-thumbnail/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-thumbnail-outlier-research",
+      "group": "Content waterfall",
+      "description": "Research high-performing YouTube thumbnails in the author's niche, extract the patterns to borrow or avoid, and brief thumbnail concepts before rendering. Use when choosing a thumbnail direction or before youtube-thumbnail renders.",
+      "path": "skills/youtube-thumbnail-outlier-research/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-title-outlier-packaging",
+      "group": "Content waterfall",
+      "description": "Find YouTube packaging outliers in the author's niche, draft 2 A/B titles from proven structures with every claim marked, and brief thumbnail concepts. Use when choosing or split-testing a YouTube title or packaging a video before recording.",
+      "path": "skills/youtube-title-outlier-packaging/SKILL.md",
+      "author": "Aditya Chouhan"
+    },
+    {
+      "name": "youtube-video-research",
+      "group": "Content waterfall",
+      "description": "Decide the author's next YouTube video before they record it, in 3 gates. An idea found depth-first inside their niche (a wave that is hot now, applied to their audience's outcome while the niche angle is still open), packaging proven by outliers in other niches, and the first 60 seconds scripted word for word. Ends in a go or no-go scorecard and logs every upload in a channel ledger. Use for \"what should my next video be\", \"is this a good video idea\", \"validate this title or thumbnail\" or \"script the intro\".",
+      "path": "skills/youtube-video-research/SKILL.md",
+      "author": "Aditya Chouhan"
+    }
+  ]
+}
