@@ -8,6 +8,7 @@ import sys
 from .qualification import qualify_prospect
 from .validator import verify_repository
 from .waterfall import generate_waterfall_plan
+from .post_writer import generate_linkedin_post
 
 
 def cmd_qualify(args):
@@ -64,6 +65,26 @@ def cmd_verify(args):
     return 0
 
 
+def cmd_post(args):
+    res = generate_linkedin_post(
+        topic=args.topic,
+        format_type=args.format,
+        cta_keyword=args.cta,
+        repo_url=args.url
+    )
+    if args.json:
+        out_str = json.dumps(res, indent=2)
+    else:
+        out_str = res["full_output"]
+
+    if args.output:
+        Path(args.output).write_text(out_str)
+        print(f"LinkedIn post generated and saved to {args.output}")
+    else:
+        print(out_str)
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         prog="linkedin-funnel",
@@ -90,6 +111,16 @@ def main():
     p_verify.add_argument("--root", "-r", help="Repository root path (defaults to current directory)")
     p_verify.add_argument("--quiet", "-q", action="store_true", help="Quiet output")
     p_verify.set_defaults(func=cmd_verify)
+
+    # Subcommand: post
+    p_post = subparsers.add_parser("post", help="Generate a Claude + Apple styled LinkedIn post and pinned comment")
+    p_post.add_argument("topic", help="Topic, architecture, or project name")
+    p_post.add_argument("--format", "-f", choices=["teardown", "waterfall", "benchmark", "release"], default="teardown", help="Post format")
+    p_post.add_argument("--cta", default="FUNNEL", help="Single-word comment velocity CTA keyword (default: FUNNEL)")
+    p_post.add_argument("--url", default="https://github.com/Aditya-chouhan/linkedin-funnel", help="URL for the pinned first comment")
+    p_post.add_argument("--json", action="store_true", help="Output post data as structured JSON")
+    p_post.add_argument("--output", "-o", help="Optional output destination path")
+    p_post.set_defaults(func=cmd_post)
 
     args = parser.parse_args()
     sys.exit(args.func(args))

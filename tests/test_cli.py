@@ -39,6 +39,23 @@ class TestCLI(unittest.TestCase):
         self.assertEqual(data["sprint_thesis"], "Full Stack Inbound Pipeline")
         self.assertEqual(len(data["schedule"]), 7)
 
+    def test_cli_post_subcommand(self):
+        """Test 'python3 -m linkedin_funnel post' generates post and pinned comment."""
+        cmd = [
+            sys.executable, "-m", "linkedin_funnel", "post",
+            "Open Source Agent Architecture", "--format", "teardown",
+            "--cta", "AGENT", "--json"
+        ]
+        res = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True)
+        self.assertEqual(res.returncode, 0, f"CLI post failed: {res.stderr}")
+        data = json.loads(res.stdout)
+        self.assertEqual(data["topic"], "Open Source Agent Architecture")
+        self.assertEqual(data["cta_keyword"], "AGENT")
+        self.assertIn("=== MAIN LINKEDIN POST ===", data["full_output"])
+        self.assertIn("=== PINNED FIRST COMMENT ===", data["full_output"])
+        self.assertNotIn("https://", data["post_body"])
+        self.assertIn("https://", data["pinned_comment"])
+
 
 if __name__ == "__main__":
     unittest.main()

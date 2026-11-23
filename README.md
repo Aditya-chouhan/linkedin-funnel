@@ -260,6 +260,15 @@ python3 scripts/check-template.py
 python3 context/scripts/wiki_lint.py
 ```
 
+### 4. Claude + Apple LinkedIn Post Writer
+Generate high-converting, authority-building LinkedIn posts and pinned first comments engineered according to the Claude + Apple editorial standard (zero links in body, contrarian hooks, technical pillars, velocity comment CTAs):
+
+```bash
+linkedin-funnel post "Pipeline Automation Architecture" --format teardown --cta FUNNEL
+# or output structured JSON:
+linkedin-funnel post "Content Waterfall System" --format waterfall --cta SYSTEM --json
+```
+
 ---
 
 ## Automated Test Suite
